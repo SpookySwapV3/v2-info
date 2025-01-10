@@ -1883,6 +1883,138 @@
       "bridgeId": "",
       "nativeChain": 1,
       "permit": 0
+    },
+    {
+      "name": "Wrapped Sonic",
+      "symbol": "WS",
+      "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/wS.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "SpookySwap",
+      "symbol": "BOO",
+      "address": "0x7A0C53F7eb34C5BC8B01691723669adA9D6CB384",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/BOO.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "Wrapped Ether (Bridged)",
+      "symbol": "WETH",
+      "address": "0x50c42dEAcD8Fc9773493ED674b675bE577f2634b",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/wETH.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "USDC (Bridged)",
+      "symbol": "USDC.e",
+      "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+      "chainId": 146,
+      "decimals": 6,
+      "logoURI": "https://assets.spooky.fi/tokens/USDC.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "EURC (Bridged)",
+      "symbol": "EURC.e",
+      "address": "0xe715cbA7B5cCb33790ceBFF1436809d36cb17E57",
+      "chainId": 146,
+      "decimals": 6,
+      "logoURI": "https://sonicscan.org/token/images/eurc_32.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "YELToken",
+      "symbol": "YEL",
+      "address": "0x949185D3BE66775Ea648F4a306740EA9eFF9C567",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/YEL.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "SuperSonic Grim",
+      "symbol": "SSGrim",
+      "address": "0xB387f9577CC7dF1B0358Fb1aeA57B3500068130f",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/SSGrim.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "Beets Staked Sonic",
+      "symbol": "stS",
+      "address": "0xE5DA20F15420aD15DE0fa650600aFc998bbE3955",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://tokenlogos.magicsea.finance/stS.svg",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "[Launchpad] DevilSpooky",
+      "symbol": "DBOO",
+      "address": "0x4e2e5742e0a641787835629054577d7c5df47dc1",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://harlequin-tiny-dove-45.mypinata.cloud/ipfs/bafybeia2aa6e5jgnv4bleulz3isehlseiuvebivg323yoddqnndpnwd3q4",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "[Launchpad] BOOO",
+      "symbol": "BOOO",
+      "address": "0x775F95Fb27Da55C025eed5EBd7595a2fea5aF081",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://assets.spooky.fi/tokens/BOOO.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "Yoko",
+      "symbol": "YOKO",
+      "address": "0x59524d5667b299c0813ba3c99a11c038a3908fbc",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://dd.dexscreener.com/ds-data/tokens/sonic/0x59524d5667b299c0813ba3c99a11c038a3908fbc.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
+    },
+    {
+      "name": "LanaAI by Yoko",
+      "symbol": "LANA",
+      "address": "0x980c141a87196e17a50ffcaa2496cfa198d30308",
+      "chainId": 146,
+      "decimals": 18,
+      "logoURI": "https://dd.dexscreener.com/ds-data/tokens/sonic/0x980c141a87196e17a50ffcaa2496cfa198d30308.png",
+      "bridgeId": "",
+      "nativeChain": 1,
+      "permit": 0
     }
   ]
 }

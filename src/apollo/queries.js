@@ -2,19 +2,14 @@ import gql from 'graphql-tag'
 import { FACTORY_ADDRESS, BUNDLE_ID } from '../constants'
 
 export const SUBGRAPH_HEALTH = gql`
-  query health {
-    indexingStatusForCurrentVersion(subgraphName: "0xALUKARD/spookyswap-eon") {
-      synced
-      health
-      chains {
-        chainHeadBlock {
-          number
-        }
-        latestBlock {
-          number
-        }
-      }
-    }
+  query data {
+    health
+    message
+    latest_block
+    earliest_block
+    chain_name
+    chain_id
+    chain_head_block
   }
 `
 

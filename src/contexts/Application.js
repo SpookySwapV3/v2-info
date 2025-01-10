@@ -174,27 +174,35 @@ export function useLatestBlocks() {
   const headBlock = state?.[HEAD_BLOCK]
 
   useEffect(() => {
-    async function fetch() {
-      healthClient
-        .query({
-          query: SUBGRAPH_HEALTH,
-        })
-        .then((res) => {
-          const syncedBlock = res.data.indexingStatusForCurrentVersion.chains[0].latestBlock.number
-          const headBlock = res.data.indexingStatusForCurrentVersion.chains[0].chainHeadBlock.number
-          if (syncedBlock && headBlock) {
-            updateLatestBlock(syncedBlock)
-            updateHeadBlock(headBlock)
-          }
-        })
-        .catch((e) => {
-          console.log(e)
-        })
+    async function fetchLatestBlocks() {
+      try {
+        const response = await fetch(
+          'https://api.0xgraph.xyz/api/public/query_deployment?subgraph_id=QmUL6XWMYzPcY2FXFZ5cNLhbCnqr18waxKgv5uXXAyRbis'
+        )
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.statusText}`)
+        }
+
+        const data = await response.json()
+
+        const syncedBlock = data?.data?.latest_block
+        const chainHeadBlock = data?.data?.chain_head_block
+
+        if (syncedBlock && chainHeadBlock) {
+          updateLatestBlock(Number(syncedBlock))
+          updateHeadBlock(Number(chainHeadBlock))
+        }
+      } catch (error) {
+        console.error("Error fetching latest blocks:", error)
+      }
     }
-    if (!latestBlock) {
-      fetch()
+
+    // Fetch data if not already present
+    if (!latestBlock || !headBlock) {
+      fetchLatestBlocks()
     }
-  }, [latestBlock, updateHeadBlock, updateLatestBlock])
+  }, [latestBlock, headBlock, updateLatestBlock, updateHeadBlock])
 
   return [latestBlock, headBlock]
 }
