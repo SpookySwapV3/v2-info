@@ -245,28 +245,16 @@ async function getGlobalData(ethPrice, oldEthPrice) {
     data = result.data.uniswapFactories[0]
 
     // fetch the historical data
-    let oneDayResult = await client.query({
-      query: GLOBAL_DATA(oneDayBlock?.number),
-      fetchPolicy: 'cache-first',
-    })
+    let oneDayResult = result
     oneDayData = oneDayResult.data.uniswapFactories[0]
 
-    let twoDayResult = await client.query({
-      query: GLOBAL_DATA(twoDayBlock?.number),
-      fetchPolicy: 'cache-first',
-    })
+    let twoDayResult = result
     twoDayData = twoDayResult.data.uniswapFactories[0]
 
-    let oneWeekResult = await client.query({
-      query: GLOBAL_DATA(oneWeekBlock?.number),
-      fetchPolicy: 'cache-first',
-    })
+    let oneWeekResult = result
     const oneWeekData = oneWeekResult.data.uniswapFactories[0]
 
-    let twoWeekResult = await client.query({
-      query: GLOBAL_DATA(twoWeekBlock?.number),
-      fetchPolicy: 'cache-first',
-    })
+    let twoWeekResult = result
     const twoWeekData = twoWeekResult.data.uniswapFactories[0]
 
     if (data && oneDayData && twoDayData && twoWeekData) {
@@ -354,14 +342,14 @@ const getChartData = async (oldestDateToFetch, offsetData) => {
         dayIndexSet.add((data[i].date / oneDay).toFixed(0))
         dayIndexArray.push(data[i])
         dayData.dailyVolumeUSD = parseFloat(dayData.dailyVolumeUSD)
-        console.log(dayData.dailyVolumeUSD)
+        // console.log(dayData.dailyVolumeUSD)
         //fix bugged start volume
-        if(dayData.dailyVolumeUSD === 574138510.0502238)
+        if (dayData.dailyVolumeUSD === 574138510.0502238)
           dayData.dailyVolumeUSD = 0.0
         //fix eon start bug
-        if(dayData.dailyVolumeUSD === 78.56029908978587)
+        if (dayData.dailyVolumeUSD === 78.56029908978587)
           dayData.dailyVolumeUSD *= (oneDay / 172)
-          
+
       })
 
       // fill in empty days ( there will be no day datas if no trades made that day )
@@ -484,10 +472,7 @@ const getEthPrice = async () => {
       query: ETH_PRICE(),
       fetchPolicy: 'cache-first',
     })
-    let resultOneDay = await client.query({
-      query: ETH_PRICE(oneDayBlock),
-      fetchPolicy: 'cache-first',
-    })
+    let resultOneDay = result
     const currentPrice = result?.data?.bundles[0]?.ethPrice
     const oneDayBackPrice = resultOneDay?.data?.bundles[0]?.ethPrice
     priceChangeETH = getPercentChange(currentPrice, oneDayBackPrice)
@@ -711,7 +696,7 @@ export function useTopLps() {
             if (results) {
               return results.liquidityPositions
             }
-          } catch (e) {}
+          } catch (e) { }
         })
       )
 
