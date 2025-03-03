@@ -4,32 +4,17 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.0xgraph.xyz/api/public/28820bd2-ad8b-4d40-a142-ce8d7c786f66/subgraphs/spookyswap/v2/v0.0.1/gn'
+    uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goatswap/v2/production/gn'
     ,
   }),
   cache: new InMemoryCache(),
   shouldBatch: true,
 })
 
-export const healthClient = new ApolloClient({
-  link: new HttpLink({
-    uri: 'https://api.0xgraph.xyz/api/public/query_deployment?subgraph_id=QmUL6XWMYzPcY2FXFZ5cNLhbCnqr18waxKgv5uXXAyRbis',
-  }),
-  cache: new InMemoryCache(),
-  shouldBatch: true,
-})
-
-export const stakingClient = new ApolloClient({
-  link: new HttpLink({
-    uri: 'https://api.thegraph.com/subgraphs/name/way2rach/talisman',
-  }),
-  cache: new InMemoryCache(),
-  shouldBatch: true,
-})
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.0xgraph.xyz/api/public/cd32e813-81db-4a20-948b-22285458fdad/subgraphs/sonic/blocks/v0.0.1/gn',
+    uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goat/min_blocks/v0.0.1/gn',
   }),
   cache: new InMemoryCache(),
 })
