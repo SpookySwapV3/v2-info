@@ -3,6 +3,7 @@ import { ThemeProvider as StyledComponentsThemeProvider, createGlobalStyle } fro
 import { useDarkModeManager } from '../contexts/LocalStorage'
 import styled from 'styled-components'
 import { Text } from 'rebass'
+import { accent1_dark } from '../constants'
 
 export default function ThemeProvider({ children }) {
   const [darkMode] = useDarkModeManager()
@@ -17,7 +18,7 @@ const theme = (darkMode, color) => ({
   panelColor: darkMode ? '#121122' : '#F2F4F8',
   backgroundColor: darkMode ? '#121122' : '#F2F4F8',
 
-  uniswapPink: darkMode ? '#51C0E1' : '#31415E',
+  uniswapPink: darkMode ? accent1_dark : '#31415E',
 
   concreteGray: darkMode ? '#29C22F' : '#F2F4F8',
   inputBackground: darkMode ? '#121122' : '#E4E9F1',
@@ -58,7 +59,7 @@ const theme = (darkMode, color) => ({
   primaryText1: darkMode ? '#6665DD' : '#6665DD',
 
   // secondary colors
-  secondary1: darkMode ? '#51C0E1' : '#73CCE7',
+  secondary1: darkMode ? accent1_dark : '#73CCE7',
   secondary2: darkMode ? '#73CCE7' : '#BAE6F3',
   secondary3: darkMode ? '#96D9ED' : '#DCF2F9',
 
@@ -70,7 +71,7 @@ const theme = (darkMode, color) => ({
   yellow1: '#FFE600',
   yellow2: '#FFA770',
   link: '#8C8CE3',
-  blue: '#73CCE7',
+  blue: accent1_dark,
 
   background: darkMode ? 'radial-gradient(135.95% 135.95% at 50% -35.95%, rgba(102, 102, 255, 0.5) 0%, rgba(18, 17, 34, 0) 100%)' : "#F2F4F8",
 })

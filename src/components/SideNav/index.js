@@ -7,11 +7,12 @@ import { useMedia } from 'react-use'
 import { transparentize } from 'polished'
 import { TYPE } from '../../Theme'
 import { withRouter } from 'react-router-dom'
-import { TrendingUp, List, PieChart, Disc } from 'react-feather'
+import { TrendingUp, BarChart2, PieChart, Disc } from 'react-feather'
 import Link from '../Link'
 import { useSessionStart } from '../../contexts/Application'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
 import Toggle from '../Toggle'
+import { DEX_NAME, DEX_URL, DISCORD_URL, DOCS_URL, TWITTER_URL, V3_INFO_URL } from '../../constants'
 
 const Wrapper = styled.div`
   height: ${({ isMobile }) => (isMobile ? 'initial' : '100vh')};
@@ -146,33 +147,39 @@ function SideNav({ history }) {
                     Pairs
                   </Option>
                 </BasicLink>
+                <a href={V3_INFO_URL}>
+                  <Option activeText={false}>
+                    <BarChart2 size={20} style={{ marginRight: '.75rem' }} />
+                    V3 Analytics
+                  </Option>
+                </a>
 
               </AutoColumn>
             )}
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
             <HeaderText>
-              <Link href="https://eon.spooky.fi" target="_blank">
-                Homepage
+              <Link href={DEX_URL} target="_blank">
+                {DEX_NAME} Interface
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://github.com/spookyswap" target="_blank">
+              <Link href="https://github.com/spookyswapv3" target="_blank">
                 Github
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://docs.spooky.fi" target="_blank">
+              <Link href={DOCS_URL} target="_blank">
                 Docs
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://discord.gg/9sypcPUMnS" target="_blank">
+              <Link href={DISCORD_URL} target="_blank">
                 Discord
               </Link>
             </HeaderText>
             <HeaderText>
-              <Link href="https://twitter.com/SpookySwap" target="_blank">
+              <Link href={TWITTER_URL} target="_blank">
                 Twitter
               </Link>
             </HeaderText>

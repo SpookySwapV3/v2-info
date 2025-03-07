@@ -9,6 +9,7 @@ import Logo from '../../assets/logo_with_text.svg'
 
 import { BasicLink } from '../Link'
 import { useMedia } from 'react-use'
+import { VERTICAL_LOGO } from '../../constants'
 
 const TitleWrapper = styled.div`
   text-decoration: none;
@@ -43,7 +44,7 @@ export default function Title() {
       <Flex alignItems="center" style={{ justifyContent: 'space-between' }}>
         <RowFixed>
           <UniIcon id="link" onClick={() => history.push('/')}>
-            <img width={!below1080 ? '160px' : '80px'} src={Logo} alt="logo" />
+            <img width={!below1080 ? '160px' : '80px'} src={VERTICAL_LOGO} alt="logo" />
           </UniIcon>
         </RowFixed>
         {below1080 && (

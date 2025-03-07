@@ -31,7 +31,7 @@ import { PlusCircle, Bookmark, AlertCircle } from 'react-feather'
 import FormattedName from '../components/FormattedName'
 import { useListedTokens } from '../contexts/Application'
 import HoverText from '../components/HoverText'
-import { UNTRACKED_COPY, TOKEN_BLACKLIST, BLOCKED_WARNINGS } from '../constants'
+import { UNTRACKED_COPY, TOKEN_BLACKLIST, BLOCKED_WARNINGS, EXPLORER_URL } from '../constants'
 import QuestionHelper from '../components/QuestionHelper'
 import Checkbox from '../components/Checkbox'
 import { shortenAddress } from '../utils'
@@ -179,7 +179,7 @@ function TokenPage({ address, history }) {
             <TYPE.light style={{ textAlign: 'center' }}>
               {BLOCKED_WARNINGS[address] ?? `This token is not supported.`}
             </TYPE.light>
-            <Link external={true} href={'https://eon-explorer.horizenlabs.io/address/' + address}>{`More about ${shortenAddress(
+            <Link external={true} href={`${EXPLORER_URL}address/` + address}>{`More about ${shortenAddress(
               address
             )}`}</Link>
           </AutoColumn>
@@ -207,7 +207,7 @@ function TokenPage({ address, history }) {
               style={{ width: 'fit-content' }}
               color={backgroundColor}
               external
-              href={'https://eon-explorer.horizenlabs.io/address/' + address}
+              href={`${EXPLORER_URL}address/` + address}
             >
               <Text style={{ marginLeft: '.15rem' }} fontSize={'14px'} fontWeight={400}>
                 ({address.slice(0, 8) + '...' + address.slice(36, 42)})
@@ -420,8 +420,8 @@ function TokenPage({ address, history }) {
                     </AutoRow>
                   </Column>
                   <ButtonLight color={backgroundColor}>
-                    <Link color={backgroundColor} external href={'https://eon-explorer.horizenlabs.io/address/' + address}>
-                      View on EON Explorer ↗
+                    <Link color={backgroundColor} external href={`${EXPLORER_URL}address/` + address}>
+                      View on block explorer ↗
                     </Link>
                   </ButtonLight>
                 </TokenDetailsLayout>

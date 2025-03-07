@@ -24,6 +24,7 @@ import { CustomLink } from '../components/Link'
 import { PageWrapper, ContentWrapper } from '../components'
 import CheckBox from '../components/Checkbox'
 import QuestionHelper from '../components/QuestionHelper'
+import { DEX_NAME } from '../constants'
 
 const ListOptions = styled(AutoRow)`
   height: 40px;
@@ -72,7 +73,7 @@ function GlobalPage() {
       <ContentWrapper>
         <div>
           <AutoColumn gap="24px" style={{ paddingBottom: below800 ? '0' : '24px' }}>
-            <TYPE.largeHeader>{below800 ? 'Spooky Analytics' : 'Spooky Analytics'}</TYPE.largeHeader>
+            <TYPE.largeHeader>{below800 ? `${DEX_NAME} V2 Analytics` : `${DEX_NAME} V2 Analytics`}</TYPE.largeHeader>
             <Search />
             <GlobalStats />
           </AutoColumn>

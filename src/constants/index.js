@@ -1,3 +1,16 @@
+export const GAS_TOKEN_NAME = 'BTC'
+export const DEX_NAME = 'GoatSwap'
+export const ASSET_URL = 'https://sxpppvinxvbb6utl.public.blob.vercel-storage.com/goatswap/'
+export const EXPLORER_URL = 'https://explorer.goat.network/'
+export const DEX_URL = 'https://goatswap.fi/'
+export const V3_INFO_URL = 'https://info.goatswap.fi/'
+export const DOCS_URL = 'https://docs.goatswap.fi/'
+export const TWITTER_URL = 'https://twitter.com/goatswap_fi'
+export const DISCORD_URL = DEX_URL
+export const VERTICAL_LOGO = ASSET_URL + 'BrandAssets/LOGO-Vertical-Light.svg'
+export const accent1_dark = '#deaf2e'
+export const accent2_dark = '#7d6932'
+
 export const FACTORY_ADDRESS = '0xbF8c8B5D27e76890416eA95a50d4732BB4906741'
 
 export const BUNDLE_ID = '1'
@@ -39,7 +52,7 @@ export const BLOCKED_WARNINGS = {
  */
 export const FEE_WARNING_TOKENS = []
 
-export const UNTRACKED_COPY = 'Derived USD values may be inaccurate without liquid stablecoin or ZEN pairings.'
+export const UNTRACKED_COPY = `Derived USD values may be inaccurate without liquid stablecoin or ${GAS_TOKEN_NAME} pairings.`
 
 // tokens that should be tracked but arent due to lag in subgraph
 export const TRACKED_OVERRIDES = [

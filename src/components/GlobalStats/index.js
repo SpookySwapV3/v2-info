@@ -7,6 +7,7 @@ import { formattedNum, localNumber } from '../../utils'
 
 import UniPrice from '../UniPrice'
 import { TYPE } from '../../Theme'
+import { GAS_TOKEN_NAME } from '../../constants'
 
 const Header = styled.div`
   width: 100%;
@@ -47,7 +48,7 @@ export default function GlobalStats() {
               }}
               style={{ position: 'relative' }}
             >
-              ZEN Price: <Medium>{formattedEthPrice}</Medium>
+              {GAS_TOKEN_NAME} Price: <Medium>{formattedEthPrice}</Medium>
               {showPriceCard && <UniPrice />}
             </TYPE.main>
           )}

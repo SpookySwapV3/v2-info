@@ -11,7 +11,7 @@ import { useAllPairData, usePairData } from '../../contexts/PairData'
 import DoubleTokenLogo from '../DoubleLogo'
 import { useMedia } from 'react-use'
 import { useAllPairsInUniswap, useAllTokensInUniswap } from '../../contexts/GlobalData'
-import { TOKEN_BLACKLIST, PAIR_BLACKLIST } from '../../constants'
+import { TOKEN_BLACKLIST, PAIR_BLACKLIST, DEX_NAME } from '../../constants'
 
 import { transparentize } from 'polished'
 import { client } from '../../apollo/client'
@@ -432,10 +432,10 @@ export const Search = ({ small = false }) => {
               : below410
                 ? 'Search...'
                 : below470
-                  ? 'Search Spooky...'
+                  ? `Search ${DEX_NAME}...`
                   : below700
                     ? 'Search pairs and tokens...'
-                    : 'Search Spooky pairs and tokens...'
+                    : `Search ${DEX_NAME} pairs and tokens...`
           }
           value={value}
           onChange={(e) => {
