@@ -8,6 +8,7 @@ export const DOCS_URL = 'https://docs.goatswap.fi/'
 export const TWITTER_URL = 'https://twitter.com/goatswap_fi'
 export const DISCORD_URL = DEX_URL
 export const VERTICAL_LOGO = ASSET_URL + 'BrandAssets/LOGO-Vertical-Light.svg'
+export const LOADING_GIF = ASSET_URL + 'Website/Foreground/Gifs-404/conclusion.gif'
 export const accent1_dark = '#deaf2e'
 export const accent2_dark = '#7d6932'
 

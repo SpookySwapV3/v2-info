@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useDarkModeManager } from '../../contexts/LocalStorage'
-import grim from '../../assets/grim_ani.gif'
+import { LOADING_GIF } from '../../constants'
 
 const Wrapper = styled.div`
   pointer-events: none;
@@ -27,7 +27,7 @@ const LocalLoader = ({ fill }) => {
 
   return (
     <Wrapper fill={fill}>
-      <img style={{ width: '150px' }} src={grim} alt="loading-icon" />
+      <img style={{ width: '250px' }} src={LOADING_GIF} alt="loading-icon" />
     </Wrapper>
   )
 }
