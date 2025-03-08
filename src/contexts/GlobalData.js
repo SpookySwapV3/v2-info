@@ -354,14 +354,14 @@ const getChartData = async (oldestDateToFetch, offsetData) => {
         dayIndexSet.add((data[i].date / oneDay).toFixed(0))
         dayIndexArray.push(data[i])
         dayData.dailyVolumeUSD = parseFloat(dayData.dailyVolumeUSD)
-        console.log(dayData.dailyVolumeUSD)
+        //console.log(dayData.dailyVolumeUSD)
         //fix bugged start volume
-        if(dayData.dailyVolumeUSD === 574138510.0502238)
+        if (dayData.dailyVolumeUSD === 574138510.0502238)
           dayData.dailyVolumeUSD = 0.0
         //fix eon start bug
-        if(dayData.dailyVolumeUSD === 78.56029908978587)
+        if (dayData.dailyVolumeUSD === 78.56029908978587)
           dayData.dailyVolumeUSD *= (oneDay / 172)
-          
+
       })
 
       // fill in empty days ( there will be no day datas if no trades made that day )
@@ -711,7 +711,7 @@ export function useTopLps() {
             if (results) {
               return results.liquidityPositions
             }
-          } catch (e) {}
+          } catch (e) { }
         })
       )
 
