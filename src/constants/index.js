@@ -11,6 +11,7 @@ export const VERTICAL_LOGO = ASSET_URL + 'BrandAssets/LOGO-Vertical-Light.svg'
 export const LOADING_GIF = ASSET_URL + 'Website/Foreground/Gifs-404/conclusion.gif'
 export const accent1_dark = '#deaf2e'
 export const accent2_dark = '#7d6932'
+export const navBackground_dark = '#1A1A1D'
 
 export const FACTORY_ADDRESS = '0xbF8c8B5D27e76890416eA95a50d4732BB4906741'
 

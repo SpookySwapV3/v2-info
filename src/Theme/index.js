@@ -3,7 +3,7 @@ import { ThemeProvider as StyledComponentsThemeProvider, createGlobalStyle } fro
 import { useDarkModeManager } from '../contexts/LocalStorage'
 import styled from 'styled-components'
 import { Text } from 'rebass'
-import { accent1_dark } from '../constants'
+import { accent1_dark, navBackground_dark } from '../constants'
 
 export default function ThemeProvider({ children }) {
   const [darkMode] = useDarkModeManager()
@@ -11,19 +11,21 @@ export default function ThemeProvider({ children }) {
   return <StyledComponentsThemeProvider theme={theme(darkMode)}>{children}</StyledComponentsThemeProvider>
 }
 
+export const bg1 = '#1e192b'
+
 const theme = (darkMode, color) => ({
   customColor: color,
   textColor: darkMode ? color : 'black',
 
-  panelColor: darkMode ? '#121122' : '#F2F4F8',
-  backgroundColor: darkMode ? '#121122' : '#F2F4F8',
+  panelColor: darkMode ? bg1 : '#F2F4F8',
+  backgroundColor: darkMode ? bg1 : '#F2F4F8',
 
   uniswapPink: darkMode ? accent1_dark : '#31415E',
 
   concreteGray: darkMode ? '#29C22F' : '#F2F4F8',
-  inputBackground: darkMode ? '#121122' : '#E4E9F1',
-  shadowColor: darkMode ? '#121122' : '#8C8CE3',
-  mercuryGray: darkMode ? '#121122' : '#BCC8DC',
+  inputBackground: darkMode ? bg1 : '#E4E9F1',
+  shadowColor: darkMode ? bg1 : '#8C8CE3',
+  mercuryGray: darkMode ? bg1 : '#BCC8DC',
 
   text1: darkMode ? 'rgba(255, 255, 255, 0.87)' : '#1F1F1F',
   text2: darkMode ? 'rgba(255, 255, 255, 0.87)' : '#565A69',
@@ -35,22 +37,22 @@ const theme = (darkMode, color) => ({
   white: '#FFFFFF',
 
   // backgrounds / greys
-  bg1: darkMode ? '#121122' : '#F2F4F8',
-  bg2: darkMode ? 'rgba(255, 255, 255, 0.05)' : '#E4E9F1',
+  bg1: darkMode ? bg1 : '#F2F4F8',
+  bg2: darkMode ? navBackground_dark : '#E4E9F1',
   bg3: darkMode ? 'rgba(255, 255, 255, 0.09)' : '#D7DEEA',
   bg4: darkMode ? 'rgba(255, 255, 255, 0.12)' : '#BCC8DC',
   bg5: darkMode ? 'rgba(255, 255, 255, 0.14)' : '#A1B2CE',
-  bg6: darkMode ? '#121122' : '#FFFFFF',
+  bg6: darkMode ? bg1 : '#FFFFFF',
 
   //specialty colors
   modalBG: darkMode ? 'rgba(18, 17, 34, 0.75)' : 'rgba(18, 17, 34, 0.6)',
   advancedBG: darkMode ? '#1E1D2D' : 'rgba(255, 255, 255, 0.4)',
-  onlyLight: darkMode ? '#121122' : 'transparent',
+  onlyLight: darkMode ? 'transparent' : 'transparent',
   divider: darkMode ? '#4A4C70' : 'rgba(49, 65, 94, 0.4)',
 
   //primary colors
   primary1: darkMode ? '#6665DD' : '#6665DD',
-  primary2: darkMode ? '#8C8CE3' : '#8C8CE3',
+  primary2: darkMode ? accent1_dark : '#8C8CE3',
   primary3: darkMode ? '#ADADEB' : '#ADADEB',
   primary4: darkMode ? '#2C2CB5' : '#2C2CB5',
   primary5: darkMode ? '#242494' : '#242494',
@@ -70,7 +72,7 @@ const theme = (darkMode, color) => ({
   green1: '#CFD784',
   yellow1: '#FFE600',
   yellow2: '#FFA770',
-  link: '#8C8CE3',
+  link: accent1_dark,
   blue: accent1_dark,
 
   background: darkMode ? 'radial-gradient(135.95% 135.95% at 50% -35.95%, rgba(102, 102, 255, 0.5) 0%, rgba(18, 17, 34, 0) 100%)' : "#F2F4F8",
