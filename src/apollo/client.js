@@ -14,7 +14,7 @@ export const client = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://thegraph.com/explorer/subgraphs/8CuodgNtSBpPZZWsfCBVKxYyWxSk1tgZKuQuCo4pMxu8',
+    uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/monad-blocks/1.0.0/gn',
   }),
   cache: new InMemoryCache(),
 })
