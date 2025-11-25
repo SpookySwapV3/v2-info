@@ -4,7 +4,7 @@ import { HttpLink } from 'apollo-link-http'
 
 export const client = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goatswap/v2/production/gn'
+    uri: 'https://api.goldsky.com/api/public/project_clss7z2o15cxh010fdvq909x6/subgraphs/monad-v2/1.0.0/gn'
     ,
   }),
   cache: new InMemoryCache(),
@@ -14,7 +14,7 @@ export const client = new ApolloClient({
 
 export const blockClient = new ApolloClient({
   link: new HttpLink({
-    uri: 'https://api.goat.0xgraph.xyz/api/public/f31d1ab2-5380-484e-bfc2-d2b8d606add5/subgraphs/goat/min_blocks/v0.0.1/gn',
+    uri: 'https://thegraph.com/explorer/subgraphs/8CuodgNtSBpPZZWsfCBVKxYyWxSk1tgZKuQuCo4pMxu8',
   }),
   cache: new InMemoryCache(),
 })
